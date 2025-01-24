@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff0000;
+            color: white;
+        }
+        button:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+
+<button id="openVideoButton">BEMBANG</button>
+
+<script>
+    document.getElementById('openVideoButton').addEventListener('click', function() {
+        // Replace with your YouTube video URL and desired timestamp
+        const videoUrl = 'https://m.youtube.com/watch?v=hA-fTsi0eyg&pp=ygUMd2FnIGlwYWdzYWJp'; // Example video URL
+        const timestamp = 81; // Timestamp in seconds (e.g., 60 seconds = 1 minute)
+
+        // Open the video at the specified timestamp
+        const urlWithTimestamp = `${videoUrl}&t=${timestamp}s`;
+        window.open(urlWithTimestamp, '_blank');
+    });
+</script>
+
+</body>
+</html>
